@@ -59,20 +59,6 @@ function makeSelect(id, object)
 }
 
 
-function Skill(name, ability, prof=false)
-{
-  this.name = name; // string
-  this.ability = ability; // ability
-  this.proficient = prof; // bool
-}
-
-
-var skills =
-{
-  perception: new Skill("Perception", abilities.wis)
-}
-
-
 function refresh()
 {
   for (a in abilities)
@@ -126,11 +112,6 @@ function edit(a)
     else a.setScore(input);
   }
   refresh();
-}
-
-function pl(string)
-{
-  document.getElementById("out").innerHTML = string;
 }
 
 function randomName()
